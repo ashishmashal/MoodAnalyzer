@@ -5,13 +5,14 @@ import org.junit.jupiter.api.Test;
 
 public class MoodAnalyzerTest {
     @Test
-    public void getMessage_WhenProper_ShouldReturnSad(){
-        MoodAnalyzer moodAnalyser=new MoodAnalyzer();
-        String result=moodAnalyser.GetMood("I am in sad mood");
-        System.out.println(result);
-        Assertions.assertEquals("SAD",result);
+        public void getMessage_WhenProper_ShouldReturnSad(){
+        MoodAnalyzer moodAnalyser=new MoodAnalyzer("I am in sad mood");
+            String result=moodAnalyser.AnalyseMood();
+            System.out.println(result);
+            Assertions.assertEquals("SAD",result);
+        }
     }
-
+/*
     @Test
     public void getMessage_WhenProper_ShouldReturnHappy(){
         MoodAnalyzer moodAnalyser=new MoodAnalyzer();
@@ -19,4 +20,6 @@ public class MoodAnalyzerTest {
         System.out.println(result);
         Assertions.assertEquals("HAPPY",result);
     }
-}
+
+ */
+
