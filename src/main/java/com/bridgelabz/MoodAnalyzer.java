@@ -18,8 +18,8 @@ public class MoodAnalyzer {
             }
         }
         catch (NullPointerException e) {
-            System.out.println("Null Pointer Exception Occured");
+            System.out.println("Null Pointer Exception Occurred");
+            return "HAPPY";
         }
-        return null;
     }
 }
