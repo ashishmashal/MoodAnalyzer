@@ -2,6 +2,8 @@ package com.bridgelabz;
 
 public class MoodAnalyzer {
     public static String message;
+
+    //Using constructor
     public MoodAnalyzer(String message){
         this.message=message;
         AnalyseMood();
