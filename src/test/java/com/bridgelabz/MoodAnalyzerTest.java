@@ -54,26 +54,11 @@ public class MoodAnalyzerTest {
         try {
             moodAnalyzer.analyseMood();
         } catch (MoodAnalyzerExceptionHanding e) {
+            System.out.println(e);
+            System.out.println(e.type);
             Assertions.assertEquals(MoodAnalyzerExceptionHanding.ExceptionType.ENTERED_NULL, e.type);
         }
     }
 
-    /***********************************************************************************************************
-     * Purpose : Custom Exception if User Provides Invalid Mood
-     * Input message: empty
-     * @return : custom exception message is empty
-     **********************************************************************************************************/
-
-    @Test
-    public void testMoodAnalysis_whenMoodIsEmpty_ShouldThrowException() {
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("");
-        try {
-            moodAnalyzer.analyseMood();
-        } catch (MoodAnalyzerExceptionHanding e) {
-            System.out.println(e);
-            System.out.println(e.type);
-            Assertions.assertEquals(MoodAnalyzerExceptionHanding.ExceptionType.ENTERED_EMPTY , e.type);
-        }
-    }
 }
 

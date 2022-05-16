@@ -3,9 +3,7 @@ package com.bridgelabz;
 public class MoodAnalyzer {
     private String message;
 
-    //Default Constructor
-    public MoodAnalyzer() {
-    }
+
 
     //Parameterized Constructor
     public MoodAnalyzer(String message) {
@@ -17,7 +15,6 @@ public class MoodAnalyzer {
         try {
             if (message.length() == 0)
                 throw new MoodAnalyzerExceptionHanding(MoodAnalyzerExceptionHanding.ExceptionType.ENTERED_EMPTY , "Please enter proper message!");
-
             if (message.contains("sad"))
                 return "SAD";
             else
